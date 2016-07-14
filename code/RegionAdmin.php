@@ -19,7 +19,7 @@ class RegionAdmin extends ModelAdmin {
 		self::$is_active = $bool;
 	}
 
-	function canView( $member ) {
+	function canView($member = null) {
 		return (self::$is_active ? parent::canView($member) : false);
 	}
 

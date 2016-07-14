@@ -94,7 +94,7 @@ class GeoLocation extends DataObject {
 	}
 
 	/**
-	 * @param int $radius The distance from this GeoLocation (in km's)
+	 * @param SS_Int $radius The distance from this GeoLocation (in km's)
 	 * @return DataObjectSet
 	 */
 	public function getByDistance( $radius ) {
@@ -108,7 +108,7 @@ class GeoLocation extends DataObject {
 	}
 
 	/**
-	 * @param int $radius
+	 * @param SS_Int $radius
 	 * @return SQLQuery
 	 */
 	public function getDistanceSQLQuery( $radius ) {
@@ -119,9 +119,9 @@ class GeoLocation extends DataObject {
 	}
 
 	/**
-	 * @param int $latitude
-	 * @param int $longitude
-	 * @param int $table
+	 * @param SS_Int $latitude
+	 * @param SS_Int $longitude
+	 * @param SS_Int $table
 	 * @return string
 	 */
 	public function getDistanceFormula( 

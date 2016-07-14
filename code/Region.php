@@ -14,8 +14,8 @@ class Region extends DataObject {
 
 	public static $summary_fields = array('Name', 'State');
 	
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
+	public function getCMSFields($params = null) {
+		$fields = parent::getCMSFields($params);
 		$fields->replaceField('GeoLocations', $field = new ManyManyDataObjectManager(
 			$controller = $this,
 			$name = 'GeoLocations',
